@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<style>* { box-sizing: border-box; margin: 0; padding: 0; } body { background: #1e1e1e; font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding: 32px 24px; color: #fff; } h2 { font-size: 13px; font-weight: 500; color: #888; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 28px; } .timeline { display: flex; align-items: center; } .frame { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 140px; flex-shrink: 0; } .label { font-size: 11px; color: #777; text-align: center; line-height: 1.4; height: 28px; display: flex; align-items: center; justify-content: center; } .menubar { background: #3a3a3a; border-radius: 6px; padding: 5px 10px; display: flex; align-items: center; gap: 5px; min-width: 90px; justify-content: center; height: 26px; } .token-icon { width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .token-icon svg { width: 14px; height: 14px; } .count-text { font-size: 12px; font-weight: 500; color: #fff; white-space: nowrap; } .bar-wrap { width: 62px; height: 16px; border: 2px solid #fff; border-radius: 3.5px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; } .bar-fill { position: absolute; left: 0; top: 0; bottom: 0; background: #fff; border-radius: 1.5px 0 0 1.5px; } .bar-text { position: relative; font-size: 9px; font-weight: 700; letter-spacing: .02em; color: #3a3a3a; mix-blend-mode: difference; filter: invert(1); } .arrow { color: #555; font-size: 18px; flex-shrink: 0; margin: 0 4px; padding-bottom: 28px; } @keyframes fillBar { 0% { width: 0%; } 100% { width: 100%; } } .fill-anim .bar-fill { animation: fillBar 1.5s cubic-bezier(0, 0, 0.2, 1) 0.6s both; } @keyframes readyPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } } .ready-text { animation: readyPulse 2s ease-in-out infinite; } @keyframes drainBar { 0% { width: 100%; } 100% { width: 55%; } } .drain-anim .bar-fill { animation: drainBar 4s ease-in 0.3s both; } .note { margin-top: 28px; font-size: 11px; color: #555; line-height: 1.6; } .note span { color: #888; }</style>
+</head>
+<body>
+<h2>Menu Bar — State Transitions</h2>
+<div class="timeline">
+  <div class="frame"><div class="label">Rate limited<br>counting down</div><div class="menubar"><div class="token-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2L6 5.5v7L12 16l6-3.5v-7L12 2zm0 2.3l4.5 2.6v5.2L12 14.7 7.5 12.1V6.9L12 4.3z"/></svg></div><span class="count-text">1h 55m</span></div></div>
+  <div class="arrow">→</div>
+  <div class="frame"><div class="label">Reset detected<br>bar fills (1.5s)</div><div class="menubar" style="padding: 5px 6px;"><div class="bar-wrap fill-anim" style="width:72px;"><div class="bar-fill"></div></div></div></div>
+  <div class="arrow">→</div>
+  <div class="frame"><div class="label">Bar full —<br>"Ready" shown</div><div class="menubar" style="padding: 5px 6px;"><div class="bar-wrap" style="width:72px;"><div class="bar-fill" style="width:100%;"></div><span class="bar-text ready-text">Ready</span></div></div></div>
+  <div class="arrow">→</div>
+  <div class="frame"><div class="label">New session starts<br>bar drains</div><div class="menubar" style="padding: 5px 6px;"><div class="bar-wrap drain-anim" style="width:72px;"><div class="bar-fill"></div></div></div></div>
+</div>
+<div class="note"><span>Countdown</span> uses the same token icon + text as calibrating mode.<br><span>Ready</span> persists until the first tokens are consumed in the new session.</div>
+<script>window.addEventListener('load', function() { window.parent.postMessage({ type: 'iframe-resize', height: document.body.scrollHeight }, '*'); });</script>
+</body></html>

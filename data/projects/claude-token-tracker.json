@@ -5,18 +5,65 @@
   "description": "Claude's rate limits reset on a rolling window — but the UI never tells you when. This Mac menu bar app watches your Claude Code sessions and shows you precisely how much capacity you have left and a countdown to the next reset.\n\nStarted as a frustration with being mid-flow and suddenly hitting the limit with no warning. Built the simplest possible thing: a tiny bar in the menu bar that drains as you use tokens, and a countdown when you're rate limited.",
   "category": "mac-menu-bar",
   "status": "active",
-  "thumbnail": "/thumbnails/claude-token-tracker.png",
+  "thumbnail": "",
   "latestVersion": "1.4.0",
   "publishedAt": "2026-01-15",
   "featured": true,
   "links": [],
   "changelog": [
-    {"version": "1.4.0", "date": "2026-02-23", "changes": [{"tag": "new", "text": "Progress bar drains proportionally during active session"}, {"tag": "new", "text": "\"Ready\" pulse animation when tokens fully reset"}, {"tag": "fixed", "text": "Countdown timer drift after sleep/wake cycle"}]},
-    {"version": "1.3.0", "date": "2026-02-10", "changes": [{"tag": "new", "text": "Token icon in menu bar during calibrating state"}, {"tag": "new", "text": "Bar fills with animation when reset is detected"}, {"tag": "updated", "text": "Reduced polling interval from 60s to 30s"}]},
-    {"version": "1.2.0", "date": "2026-01-28", "changes": [{"tag": "new", "text": "Rate limit countdown in menu bar (hours and minutes)"}, {"tag": "fixed", "text": "App failed to launch on macOS Sequoia 15.3"}]},
-    {"version": "1.0.0", "date": "2026-01-15", "changes": [{"tag": "new", "text": "Initial release — token usage progress bar in menu bar"}, {"tag": "new", "text": "Auto-detects Claude Code session start and end"}]}
+    {
+      "version": "1.4.0",
+      "date": "2026-02-23",
+      "changes": [
+        { "tag": "new", "text": "Progress bar drains proportionally during active session" },
+        { "tag": "new", "text": "\"Ready\" pulse animation when tokens fully reset" },
+        { "tag": "fixed", "text": "Countdown timer drift after sleep/wake cycle" }
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-02-10",
+      "changes": [
+        { "tag": "new", "text": "Token icon in menu bar during calibrating state" },
+        { "tag": "new", "text": "Bar fills with animation when reset is detected" },
+        { "tag": "updated", "text": "Reduced polling interval from 60s to 30s" }
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-01-28",
+      "changes": [
+        { "tag": "new", "text": "Rate limit countdown in menu bar (hours and minutes)" },
+        { "tag": "fixed", "text": "App failed to launch on macOS Sequoia 15.3" }
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-01-15",
+      "changes": [
+        { "tag": "new", "text": "Initial release — token usage progress bar in menu bar" },
+        { "tag": "new", "text": "Auto-detects Claude Code session start and end" }
+      ]
+    }
   ],
-  "demos": [{"id": "state-transitions", "title": "Menu Bar State Transitions", "type": "iframe", "src": "/demos/claude-token-tracker/bar_animation.html", "description": "Animated walkthrough of all 4 menu bar states.", "height": 240}],
-  "componentStates": [{"id": "menu-bar-states", "name": "Menu Bar — All States", "src": "/components/claude-token-tracker/menu-bar-states.html", "description": "All possible states of the menu bar icon across the token lifecycle.", "height": 240}],
+  "demos": [
+    {
+      "id": "state-transitions",
+      "title": "Menu Bar State Transitions",
+      "type": "iframe",
+      "src": "/demos/claude-token-tracker/bar_animation.html",
+      "description": "Animated walkthrough of all 4 menu bar states — from rate limited countdown through reset detection to active session drain.",
+      "height": 240
+    }
+  ],
+  "componentStates": [
+    {
+      "id": "menu-bar-states",
+      "name": "Menu Bar — All States",
+      "src": "/components/claude-token-tracker/menu-bar-states.html",
+      "description": "All possible states of the menu bar icon across the token lifecycle.",
+      "height": 240
+    }
+  ],
   "tags": ["AI", "productivity", "Claude", "developer tools"]
 }

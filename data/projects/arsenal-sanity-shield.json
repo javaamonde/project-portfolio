@@ -1,0 +1,52 @@
+{
+  "id": "arsenal-sanity-shield",
+  "name": "Arsenal Sanity Shield",
+  "tagline": "Hide the football internet after a bad result",
+  "description": "Losing hurts. What makes it worse is opening a browser and immediately getting dunked on — headlines, hot takes, fan reactions, YouTube thumbnails with crying faces. Arsenal Sanity Shield makes it stop.\n\nInstall it, forget it. When Arsenal lose or draw, the extension detects the result and quietly hides football content across the web — articles, YouTube channels, social posts. When they win, everything's back to normal.\n\nBuilt the free version for Arsenal fans. The premium tier (Football Sanity Shield) extends it to any English club across six competitions.",
+  "category": "chrome-extension",
+  "status": "active",
+  "thumbnail": "/thumbnails/arsenal-sanity-shield.png",
+  "latestVersion": "1.0.0",
+  "publishedAt": "2026-02-24",
+  "featured": false,
+  "links": [],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-02-24",
+      "changes": [
+        { "tag": "new", "text": "Arsenal Sanity Shield — free tier tracking Arsenal in PL and Champions League" },
+        { "tag": "new", "text": "Content blocking across all sites when Arsenal lose or draw" },
+        { "tag": "new", "text": "YouTube channel blocking by ID and handle (AFTV, Rory Talks Arsenal, and more)" },
+        { "tag": "new", "text": "60+ Arsenal keyword list covering players, hashtags, and club names" },
+        { "tag": "new", "text": "Vercel backend API with secret validation and 30-minute edge cache" },
+        { "tag": "new", "text": "Animated loading spinner during match polls" },
+        { "tag": "new", "text": "Auto-refresh via Chrome storage listener — popup updates without reload" },
+        { "tag": "new", "text": "Football Sanity Shield (premium) — any English club, 6 competitions, options page, club picker" },
+        { "tag": "fixed", "text": "Rows hiding for clubs not in knockout competitions" },
+        { "tag": "fixed", "text": "Popup freezing during background polls" },
+        { "tag": "fixed", "text": "Knockout competition visibility for non-qualifying clubs" }
+      ]
+    }
+  ],
+  "demos": [
+    {
+      "id": "popup-states",
+      "title": "Extension Popup — All States",
+      "type": "iframe",
+      "src": "/demos/arsenal-sanity-shield/popup-states.html",
+      "description": "The extension popup across all possible states — safe browsing, blocking active, polling in progress, and API error.",
+      "height": 520
+    }
+  ],
+  "componentStates": [
+    {
+      "id": "extension-states",
+      "name": "Popup UI — Component States",
+      "src": "/components/arsenal-sanity-shield/extension-states.html",
+      "description": "Individual UI components: competition status rows, blocking indicator, upsell card, and error state.",
+      "height": 600
+    }
+  ],
+  "tags": ["Arsenal", "Chrome extension", "football", "content blocking", "productivity"]
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Sanity Shield — Components</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #1a1a1a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 28px 24px; color: #e5e5e5; }
+    .section { margin-bottom: 20px; }
+    .section-label { font-size: 10px; font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: 0.12em; color: #444; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #252525; }
+    .club-select { width: 100%; padding: 8px 12px; background: #222; border: 1px solid #333; border-radius: 8px; color: #ccc; font-size: 13px; appearance: none; }
+    .select-wrap { position: relative; }
+    .select-wrap::after { content: '▾'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #666; pointer-events: none; }
+    .comp-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; background: #222; border-radius: 8px; border: 1px solid #2a2a2a; margin-bottom: 5px; }
+    .comp-left { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #ccc; }
+    .pill { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 10px; font-weight: 600; }
+    .pill-ok { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.2); }
+    .pill-loading { background: rgba(163,163,163,0.1); color: #888; border: 1px solid rgba(163,163,163,0.2); }
+    .pill-error { background: rgba(248,113,113,0.12); color: #f87171; border: 1px solid rgba(248,113,113,0.2); }
+    .spinner { width: 8px; height: 8px; border: 1.5px solid #555; border-top-color: #888; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .options-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: #222; border-radius: 8px; border: 1px solid #2a2a2a; margin-bottom: 5px; font-size: 12px; color: #aaa; }
+    .toggle { width: 32px; height: 18px; border-radius: 999px; position: relative; }
+    .toggle-on { background: #3b82f6; } .toggle-off { background: #333; }
+    .toggle::after { content: ''; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #fff; top: 3px; }
+    .toggle-on::after { right: 3px; } .toggle-off::after { left: 3px; }
+    .first-run { background: #222; border: 1px solid #2a2a2a; border-radius: 10px; padding: 16px; text-align: center; font-size: 13px; color: #555; }
+    .footer-bar { display: flex; justify-content: space-between; font-size: 11px; padding: 6px 0; }
+    .muted { color: #444; } .link { color: #3b82f6; }
+  </style>
+</head>
+<body>
+  <div class="section"><div class="section-label">Club selector</div><div class="select-wrap"><select class="club-select"><option>Arsenal</option><option>Chelsea</option><option>Liverpool</option></select></div></div>
+  <div class="section"><div class="section-label">Competition rows</div>
+    <div class="comp-row"><div class="comp-left">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</div><span class="pill pill-ok">✅ Tracking</span></div>
+    <div class="comp-row"><div class="comp-left">⭐ Champions League</div><span class="pill pill-loading"><span class="spinner"></span> Polling</span></div>
+    <div class="comp-row"><div class="comp-left">🏆 Europa League</div><span class="pill pill-error">⚠️ Issue</span></div>
+  </div>
+  <div class="section"><div class="section-label">Options page — per-competition toggles</div>
+    <div class="options-row"><span>Block on loss</span><div class="toggle toggle-on"></div></div>
+    <div class="options-row"><span>Block on draw</span><div class="toggle toggle-off"></div></div>
+  </div>
+  <div class="section"><div class="section-label">First-run prompt</div><div class="first-run">Pick a club above to start tracking.</div></div>
+  <div class="section"><div class="section-label">Footer</div><div class="footer-bar"><span class="muted">Updated 5m ago</span><span class="link">Refresh</span></div></div>
+  <script>
+    window.addEventListener('load', function () { window.parent.postMessage({ type: 'iframe-resize', height: document.body.scrollHeight + 16 }, '*'); });
+  </script>
+</body>
+</html>

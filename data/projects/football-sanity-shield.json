@@ -1,0 +1,53 @@
+{
+  "id": "football-sanity-shield",
+  "name": "Football Sanity Shield",
+  "tagline": "Hide the football internet after a bad result — any club",
+  "description": "Arsenal Sanity Shield for every English football fan.\n\nPick your club, pick your competitions, and forget about it. When your team loses or draws, the extension quietly hides football content across the web. No results, no hot takes, no crying-face thumbnails. You just browse normally.\n\nSupports any English club across six competitions — Premier League, Champions League, Europa League, Conference League, FA Cup, and League Cup. Per-competition toggles let you choose whether to block on loss only, or loss and draw.",
+  "category": "chrome-extension",
+  "status": "wip",
+  "thumbnail": "/thumbnails/football-sanity-shield.png",
+  "latestVersion": "1.0.0",
+  "publishedAt": "2026-02-24",
+  "featured": false,
+  "links": [
+    { "type": "website", "url": "https://footballsanityshield.com" }
+  ],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-02-24",
+      "changes": [
+        { "tag": "new", "text": "Pick any English club from a full dropdown — Premier League, Championship, and beyond" },
+        { "tag": "new", "text": "6 competitions: Premier League, Champions League, Europa League, Conference League, FA Cup, League Cup" },
+        { "tag": "new", "text": "Options page — per-competition block toggles (block on loss only, or loss + draw)" },
+        { "tag": "new", "text": "Club switcher always visible in popup; also on the options page" },
+        { "tag": "new", "text": "Champions League knockout tracking — eliminated clubs silently hidden, no badge shown" },
+        { "tag": "new", "text": "Vercel backend API with secret validation and 30-minute edge cache" },
+        { "tag": "new", "text": "First-run experience — club picker prompt until a club is selected" },
+        { "tag": "new", "text": "Auto-refresh via Chrome storage listener — popup updates without close/reopen" },
+        { "tag": "new", "text": "Animated loading spinner while extension checks scores" },
+        { "tag": "updated", "text": "Renamed from EPL Sanity Shield — avoids Premier League trademark" }
+      ]
+    }
+  ],
+  "demos": [
+    {
+      "id": "popup-states",
+      "title": "Extension Popup — States",
+      "type": "iframe",
+      "src": "/demos/football-sanity-shield/popup-states.html",
+      "description": "First-run club picker, tracking state, polling, and error — across all supported competitions.",
+      "height": 340
+    }
+  ],
+  "componentStates": [
+    {
+      "id": "extension-states",
+      "name": "Popup UI — Components",
+      "src": "/components/football-sanity-shield/extension-states.html",
+      "description": "Club selector, competition rows for all six comps, options page toggle, and first-run prompt.",
+      "height": 540
+    }
+  ],
+  "tags": ["Chrome extension", "football", "content blocking", "productivity"]
+}

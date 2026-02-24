@@ -1,10 +1,12 @@
 import type { Project } from '@/types/project'
 import claudeTokenTracker from '../../data/projects/claude-token-tracker.json'
 import arsenalSanityShield from '../../data/projects/arsenal-sanity-shield.json'
+import footballSanityShield from '../../data/projects/football-sanity-shield.json'
 
 const allProjects: Project[] = [
   claudeTokenTracker as Project,
   arsenalSanityShield as Project,
+  footballSanityShield as Project,
 ]
 
 export function getAllProjects(): Project[] {

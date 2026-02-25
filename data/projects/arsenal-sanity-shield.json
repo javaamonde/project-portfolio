@@ -2,9 +2,9 @@
   "id": "arsenal-sanity-shield",
   "name": "Arsenal Sanity Shield",
   "tagline": "Hide the football internet after a bad result",
-  "description": "Losing hurts. What makes it worse is immediately seeing headlines, hot takes, and YouTube thumbnails with crying faces. Arsenal Sanity Shield makes that stop.\n\nThe extension runs quietly in the background. When Arsenal lose or draw, it detects the result and silently hides football content across the web \u2014 articles, YouTube channels, social posts. It never tells you the score. You just browse normally and the bad news isn't there.\n\nThe free tier tracks Arsenal in the Premier League and Champions League. A premium version (Football Sanity Shield) is in development for any English club across six competitions.",
+  "description": "Losing hurts. What makes it worse is immediately seeing headlines, hot takes, and YouTube thumbnails with crying faces. Arsenal Sanity Shield makes that stop.\n\nThe extension runs quietly in the background. When Arsenal lose or draw, it detects the result and silently hides football content across the web — articles, YouTube channels, social posts. It never tells you the score. You just browse normally and the bad news isn't there.\n\nThe free tier tracks Arsenal in the Premier League and Champions League. A premium version (Football Sanity Shield) is in development for any English club across six competitions.",
   "category": "chrome-extension",
-  "status": "active",
+  "status": "launched",
   "thumbnail": "",
   "latestVersion": "1.0.0",
   "publishedAt": "2026-02-24",
@@ -15,23 +15,23 @@
       "version": "1.0.0",
       "date": "2026-02-24",
       "changes": [
-        { "tag": "new", "text": "Initial release \u2014 tracks Arsenal in Premier League and Champions League" },
-        { "tag": "new", "text": "Content blocking across all sites when Arsenal lose or draw \u2014 silently, no result shown" },
+        { "tag": "new", "text": "Initial release — tracks Arsenal in Premier League and Champions League" },
+        { "tag": "new", "text": "Content blocking across all sites when Arsenal lose or draw — silently, no result shown" },
         { "tag": "new", "text": "YouTube channel blocking by channel ID and handle (AFTV, Rory Talks Arsenal, and more)" },
         { "tag": "new", "text": "60+ Arsenal keyword list covering players, hashtags, and club names" },
         { "tag": "new", "text": "Animated loading spinner while extension checks scores" },
-        { "tag": "new", "text": "Auto-refresh via Chrome storage listener \u2014 popup updates without close/reopen" },
+        { "tag": "new", "text": "Auto-refresh via Chrome storage listener — popup updates without close/reopen" },
         { "tag": "new", "text": "Upsell card in popup for Football Sanity Shield premium tier" },
-        { "tag": "updated", "text": "Migrated to Vercel backend API \u2014 API key is now server-side only, never shipped in extension code" },
+        { "tag": "updated", "text": "Migrated to Vercel backend API — API key is now server-side only, never shipped in extension code" },
         { "tag": "fixed", "text": "Popup freezing on open during background polls" },
-        { "tag": "fixed", "text": "\"Knocked out\" badge revealing bad news \u2014 eliminated competitions now silently hidden" }
+        { "tag": "fixed", "text": "\"Knocked out\" badge revealing bad news — eliminated competitions now silently hidden" }
       ]
     }
   ],
   "demos": [
     {
       "id": "popup-states",
-      "title": "Extension Popup \u2014 States",
+      "title": "Extension Popup — States",
       "type": "iframe",
       "src": "/demos/arsenal-sanity-shield/popup-states.html",
       "description": "The three popup states: Tracking (safe to browse), Polling (checking scores), and Issue (API error). The extension never shows you the actual result.",
@@ -41,9 +41,9 @@
   "componentStates": [
     {
       "id": "extension-states",
-      "name": "Popup UI \u2014 Components",
+      "name": "Popup UI — Components",
       "src": "/components/arsenal-sanity-shield/extension-states.html",
-      "description": "Status badges, competition rows, upsell card, and footer \u2014 the building blocks of the popup.",
+      "description": "Status badges, competition rows, upsell card, and footer — the building blocks of the popup.",
       "height": 520
     }
   ],

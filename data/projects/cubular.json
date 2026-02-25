@@ -10,7 +10,8 @@
   "publishedAt": "2026-02-25",
   "featured": false,
   "links": [
-    { "type": "github", "url": "https://github.com/javaamonde/cubular" }
+    { "type": "github", "url": "https://github.com/javaamonde/cubular" },
+    { "type": "website", "url": "https://cubular.vercel.app", "label": "Visit Prototype" }
   ],
   "changelog": [
     {

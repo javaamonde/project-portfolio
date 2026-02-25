@@ -4,7 +4,7 @@
   "tagline": "Hide the football internet after a bad result",
   "description": "Losing hurts. What makes it worse is immediately seeing headlines, hot takes, and YouTube thumbnails with crying faces. Arsenal Sanity Shield makes that stop.\n\nThe extension runs quietly in the background. When Arsenal lose or draw, it detects the result and silently hides football content across the web — articles, YouTube channels, social posts. It never tells you the score. You just browse normally and the bad news isn't there.\n\nThe free tier tracks Arsenal in the Premier League and Champions League. A premium version (Football Sanity Shield) is in development for any English club across six competitions.",
   "category": "chrome-extension",
-  "status": "launched",
+  "status": "in-progress",
   "thumbnail": "",
   "latestVersion": "1.0.0",
   "publishedAt": "2026-02-24",

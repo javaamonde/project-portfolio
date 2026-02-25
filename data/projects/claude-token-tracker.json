@@ -4,7 +4,7 @@
   "tagline": "Know exactly when Claude resets",
   "description": "Claude's rate limits reset on a rolling window — but the UI never tells you when. This Mac menu bar app watches your Claude Code sessions and shows you precisely how much capacity you have left and a countdown to the next reset.\n\nStarted as a frustration with being mid-flow and suddenly hitting the limit with no warning. Built the simplest possible thing: a tiny bar in the menu bar that drains as you use tokens, and a countdown when you're rate limited.",
   "category": "mac-menu-bar",
-  "status": "launched",
+  "status": "in-progress",
   "thumbnail": "",
   "latestVersion": "1.4.0",
   "publishedAt": "2026-01-15",

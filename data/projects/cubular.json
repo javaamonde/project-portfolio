@@ -1,0 +1,39 @@
+{
+  "id": "cubular",
+  "name": "Cubular",
+  "tagline": "3D multi-axis comparison charts in a rotatable wireframe cube",
+  "description": "Compare anything across three dimensions — and actually see the shape.\n\nCubular lets you plot entities in a rotatable 3D wireframe cube across any three axes you define. Hover an entity to see its exact values. Rotate the cube to find clusters and outliers you'd never spot in a flat chart. Three 2D projection panels on the side let you read exact positions without losing the 3D context.\n\nThe store is generic — any three-dimensional comparison works. Ships with JRPG strategy games plotted across Tactics, Story Depth, and Time Investment as sample data.",
+  "category": "web-app",
+  "status": "in-progress",
+  "thumbnail": "",
+  "latestVersion": "0.1.0",
+  "publishedAt": "2026-02-25",
+  "featured": false,
+  "links": [
+    { "type": "github", "url": "https://github.com/javaamonde/cubular" }
+  ],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "date": "2026-02-25",
+      "changes": [
+        { "tag": "new", "text": "3D wireframe cube — rotatable via OrbitControls, perspective camera for depth" },
+        { "tag": "new", "text": "Entity points — coloured sphere meshes plotted at (x, y, z) positions 0–1; hover scales and glows with tooltip" },
+        { "tag": "new", "text": "Axis name labels — rotate in screen space to always align with their edge regardless of cube rotation" },
+        { "tag": "new", "text": "Polar end arrows — directional 3D cone meshes on axis edges; hover reveals min/max label" },
+        { "tag": "new", "text": "Sidebar entity stats — each entity lists all three axis values with full label names" },
+        { "tag": "new", "text": "Face projections panel — three 80×80 SVG scatter plots (X·Y, X·Z, Y·Z) for 2D cross-sections" },
+        { "tag": "new", "text": "Sidebar collapse toggle — collapses to give the cube full screen width" },
+        { "tag": "new", "text": "Zustand store — chartStore holds title, axes, and entities; sample data: JRPG strategy games" },
+        { "tag": "updated", "text": "Removed abbreviated axis stat display in favour of full axis label names" },
+        { "tag": "updated", "text": "Removed AXES panel from sidebar — redundant with cube labels" },
+        { "tag": "fixed", "text": "Axis labels now track projected 3D edge direction in real time via useFrame" },
+        { "tag": "fixed", "text": "Z axis label was misaligned with depth edge at non-default rotations" },
+        { "tag": "fixed", "text": "Arrow cones now both point toward the max end of their axis" }
+      ]
+    }
+  ],
+  "demos": [],
+  "componentStates": [],
+  "tags": ["3D", "data visualisation", "web app", "React Three Fiber", "charts"]
+}
